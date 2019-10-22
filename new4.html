@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>第一个表格</h2>
+    <table border="1" style="border-top:4px solid black;border:1px solid black;border-collapse:collapse;width:800px;">
+        <tr style="height:100px;">
+            <th>日期</th>
+            <th>花费</th>
+            <th>备注</th>
+        </tr>
+        <tr>
+            <td style="padding:8px;">2019-10-01</td>
+            <td style="padding:8px;">500.00</td>
+            <td style="padding:8px;"></td>
+        </tr>
+        <tr>
+            <td style="text-align:center;">2019-10-02</td>
+            <td style="vertical-align:top;height:100px;">1000.0</td>
+            <td style="vertical-align:bottom;">交通大头</td>
+        </tr>
+        <tr>
+            <td>2019-10-03</td>
+            <td>800.32</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h2>合并列</h2>
+    <table border="1" style="border:1px solid black;border-collapse:collapse;">
+        <tr>
+            <td>班级</td>
+            <td>名称</td>
+            <td>成绩</td>
+            <td>入学时间</td>
+        </tr>
+        <tr>
+            <td>C1</td>
+            <td>LIU</td>
+            <td colspan="2">100
+            2019-07-01</td>
+        </tr>
+        <tr>
+            <td>C1</td>
+            <td>WANG</td>
+            <td>80</td>
+            <td>2010-08-01</td>
+        </tr>
+    </table>
+    <h2>行合并</h2>
+    <table border="1" style="border:1px solid black;border-collapse:collapse;">
+        <tr>
+            <td>班级</td>
+            <td>名称</td>
+            <td>成绩</td>
+            <td>入学时间</td>
+        </tr>
+        <tr>
+            <td>C1</td>
+            <td rowspan="2">LIU</td>
+            <td>100</td>
+            <td>2019-07-01</td>
+        </tr>
+        <tr>
+            <td>C1</td>
+
+            <td>80</td>
+            <td>2010-08-01</td>
+        </tr>
+    </table>
+</body>
+
+</html>
