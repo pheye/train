@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div {
+        padding:8px;
+        border:1px solid black;    
+    }
+    .float {
+        float:right;
+    }
+    .float-left {
+        float: left;
+    }
+    .width-120 {
+        width: 120px;
+    }
+    .big {
+        width: 150px;
+        height:40px;
+    }
+    .clearfix {
+        clear:both;
+    }
+    </style>
+</head>
+<body>
+    <h2>经典情况</h2>
+    <div class="float width-120">框1</div>
+    <div class="float width-120">框2</div>
+    <div class="float width-120">框3</div>
+    <div style="background-color:red""
+    >框4</div>
+    <h2>经典用法2</h2>
+    <div class="float-left big">框4</div>
+    <div class="float-left width-120">框5</div>
+    <div class="float-left width-120 clearfix">框6</div>
+    <div style="clear:both"></div>
+    <h2>文字环绕</h2>
+    <div class="flat-left width-120" >框1</div><p>234</p>
+    <img src="https://ss1.bdstatic.com/6OF1bjeh1BF3odCf/it/u=2627122944,4252681548&fm=74&app=80&f=JPEG&size=f121,90?sec=1880279984&t=1ad8cf2802b126d16fcdf3489f7b616b" alt="" class="float-left">
+    <p>3e2323</p>
+    <p>8888</p>
+    <p style="clear:left;">32323233</p>
+    <h2>高度塌陷为0的问题</h2>
+    <div style="overflow: hidden;">
+        <div class="float-left">Left</div>
+        <div class="float">    <img src="https://ss1.bdstatic.com/6OF1bjeh1BF3odCf/it/u=2627122944,4252681548&fm=74&app=80&f=JPEG&size=f121,90?sec=1880279984&t=1ad8cf2802b126d16fcdf3489f7b616b" alt="" ></div>
+    </div>
+</body>
+</html>

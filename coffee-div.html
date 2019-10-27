@@ -6,53 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>瑞辛咖啡</title>
-    <style>
-        ul {
-            list-style-type: none;
-            padding:0;  
-        }
-        ul>li {
-            border-bottom: 1px solid #595959;
-        }
-        ul>li:last-child{
-            border-bottom:none;
-        }
-        a {
-            display:block;
-            padding: 8px 16px;
-            color:#000000;
-            text-decoration: none;
-        }
-        a:hover {
-            background-color: #595959;
-            color: white;
-        }
-        a:active {
-            background-color: #40a9ff;
-        }
-        .active {
-            background-color: #40a9ff;
-        }
-        p {
-            text-indent: 2em;
-        }
-        #price-table tr td:last-child::before {
-            content: '￥';
-        }
-    </style>
+    <link rel="stylesheet" href="styles/coffee.css">
 </head>
 
-<body style="margin:0;" border="0" cellspacing="0" cellpadding="0">
-    <table style="width:100%;" border="0"  cellspacing="0" cellpadding="0">
-        <tr>
-            <td colspan="2" style="text-align:center;background-color:#002766;color:#bae7ff;">
-                <h2><img
-                    src="images/coffee.png"
-                    style="width:32px;height:32px;line-height:64px;vertical-align:middle;" /><span style="vertical-align:middle;line-height:64px;height:32px;">来杯咖啡吗</span></h2></td>
-        </tr>
-        <tr>
-            <td style="width:200px;vertical-align:top;color:#002766;background-color:#f5f5f5;">
-                <ul>
+<body>
+        
+            <div id="header" class="center">
+                <h2><img src="images/coffee.png" id="logo" /><span id="header-title" style="font-size:16px;">来杯咖啡吗</span></h2>
+            </div>
+            <div style="position:relative;background-color: #f5f5f5;">
+            <div id="sidebar">
+                <div style="position:sticky;top:0;">
+                <div class="center">MENU</div>
+                <ul style="">
                     <li><a href="#c1">拿铁</a></li>
                     <li><a href="#c2">美式咖啡</a></li>
                     <li><a href="#c3">卡布奇诺</a></li>
@@ -60,14 +26,14 @@
                         <a href="#c4">焦糖玛奇朵</a>
                     </li>
                 </ul>
-            </td>
-            <td style="padding:8px;">
-                <h2 style="text-align:center;"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571740504341&di=3de31086756116f089e659bb2e35e8cd&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F0148ae56ebc61332f875a944cfe42f.jpg" alt="" style="width:80%;">
-                    </h2>
-                <table border="1" style="border:1px solid black; 
-                border-collapse:collapse;
-                width:80%;
-                margin:0 auto;" id="price-table">
+                </div>
+            </div>
+            <div id="content">
+                <h2 class="center"><img
+                        src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571740504341&di=3de31086756116f089e659bb2e35e8cd&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F0148ae56ebc61332f875a944cfe42f.jpg"
+                        alt="" id="banner">
+                </h2>
+                <table border="1" id="price-table">
                     <tr>
                         <th>咖啡</th>
                         <th>价格</th>
@@ -90,8 +56,8 @@
                     </tr>
                 </table>
                 <h2 id="c1">拿铁</h2>
-                <img src="https://ss1.bdstatic.com/6OF1bjeh1BF3odCf/it/u=2627122944,4252681548&fm=74&app=80&f=JPEG&size=f121,90?sec=1880279984&t=1ad8cf2802b126d16fcdf3489f7b616b"
-                    alt="">
+                <img  style="display:block;" src="https://ss1.bdstatic.com/6OF1bjeh1BF3odCf/it/u=2627122944,4252681548&fm=74&app=80&f=JPEG&size=f121,90?sec=1880279984&t=1ad8cf2802b126d16fcdf3489f7b616b"
+                    alt=""><span>Introduce</span>
                 <p>
                     拿铁咖啡是意大利浓缩咖啡(Espresso)与牛奶的经典混合，意大利人也很喜欢把拿铁作为早餐的饮料。意大利人早晨的厨房里，照得到阳光的炉子上通常会同时煮着咖啡和牛奶。
                 </p>
@@ -111,13 +77,14 @@
                 <p>焦糖玛奇朵（英文：Caramel
                     Macchiato）是在香浓热牛奶上加入浓缩咖啡、香草，再淋上纯正焦糖而制成的饮品，融合三种不同口味。Macchiato意大利文，意思是“烙印”和“印染”，中文音译“玛奇朵”。“Caramel”意思是焦糖。
                 </p>
+            </div>  
+            <div class="clearfix"></div> 
+        </div>    
+            <div colspan="2" id="footer" class="center">&copy; 无锋网络科技有限公司
 
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" style="text-align:center;background-color:#002766;line-height:64px;color:#bae7ff;">&copy; 无锋网络科技有限公司</td>
-        </tr>
-    </table>
+            </div>
+        
+
 </body>
 
 </html>
