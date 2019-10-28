@@ -4,16 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>下拉练习</title>
+    <title>下拉菜单基础练习</title>
+    <style>
+    .dropbtn {
+        background-color: #4CAF50;
+        color: white;
+        border:none;
+        padding: 16px;
+        font-size:16px;
+        cursor: pointer;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .dropdown-content {
+        display:none;
+        position:absolute;
+        min-width: 160px;
+        background-color: #f9f9f9;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        z-index: 99999;
+    }
+    .dropdown-content a {
+        color: black;
+        display:block;
+        text-decoration: none;
+        padding: 12px 16px;
+    }
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .right {
+        float: right;
+    }
+    </style>
 </head>
 <body>
-    <div style="height:80px;text-align: center;">
-            <div >
-                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571996624005&di=b7893c6e6153504df12c9f7937549549&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F015678554345bb0000019ae9855f44.jpg" alt="" style="width:60px;height:60px;">
-                    Hello,World
-                </div>
-
+    <h2>基础下拉</h2>
+    <div class="dropdown">
+        移到我这里显示下拉菜单
+        <div class="dropdown-content">
+            <p>Hello,World</p>
+            <p>Hello,Solaris</p>
+        </div>
     </div>
- 
+    <h2>基础下拉2</h2>
+    <div class="dropdown">
+        <button class="dropbtn">下拉菜单</button>
+        <div class="dropdown-content">
+            <a href="#">Apple</a>
+            <a href="#">Orange</a>
+            <a href="#">Bnana</a>
+        </div>
+    </div>
+    <h2>靠右（注意对齐边缘）</h2>
+    <div class="dropdown right">
+        <button class="dropbtn">下拉菜单（右边)</button>
+        <div class="dropdown-content" style="right:0;">
+            <a href="#">Apple</a>
+            <a href="#">Orange</a>
+            <a href="#">Bnana</a>
+        </div>
+    </div>
 </body>
 </html>
