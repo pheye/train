@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tooltip</title>
+    <style>
+        .tooltip {
+            position: relative;
+            border-bottom: 1px dotted black;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            position: absolute;
+            background-color: black;
+            color: #eee;
+            padding: 5px 0;
+            border-radius: 6px;
+
+            visibility: hidden;
+            width: 120px;
+            text-align: center;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+
+        .tooltip .right {
+            left: 105%;
+            top: -5px;
+        }
+        .tooltip .right.tooltiptext::after {
+            content:'';
+            position:absolute;
+            right:100%;
+            top:50%;
+            margin-top:-5px;
+            border-width:5px;
+            border-style:solid;
+            border-color:transparent black transparent transparent;
+        }
+
+        .tooltip .left {
+            right: 105%;
+            top: -5px;
+        }
+        .tooltip .left.tooltiptext::after {
+            content: '';
+            position: absolute;
+            left:100%;
+            top:50%;
+            margin-top:-5px;
+            border-width:5px;
+            border-style:solid;
+            border-color:transparent transparent transparent black;
+        }
+        .tooltip .top {
+            bottom: 120%;
+            left:50%;
+            margin-left: -60px;
+        }
+        .tooltip
+        .top.tooltiptext::after {
+            content: '';
+            position:absolute;
+            top:100%;
+            left:50%;
+            border-width:5px;
+            border-style:solid;
+            border-color:black transparent transparent transparent;
+        }
+        .tooltip .bottom {
+            top: 120%;
+            left: 50%;
+            margin-left: -60px;
+        }
+        .tooltip .bottom.tooltiptext::after {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent black transparent;
+            
+        }
+
+        .tooltip .tooltiptext.animate {
+            opacity: 0;
+            transition: opacity 2s;
+        }
+
+        .tooltip:hover .tooltiptext.animate {
+            opacity: 1;
+        }
+
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>基础提示工具练习(右)</h2>
+    <div class="tooltip">鼠标移到我这
+        <span class="tooltiptext right">提示文本</span>
+    </div>
+    <h2>提示工具定位练习(左）</h2>
+    <div class="tooltip">鼠标移到我这
+        <span class="tooltiptext left">提示文本</span>
+    </div>
+    <h2>提示工具定位练习(上）</h2>
+    <div class="tooltip">鼠标移到我这
+        <span class="tooltiptext top">提示文本</span>
+    </div>
+    <h2>提示工具定位练习(下）</h2>
+    <div class="tooltip">鼠标移到我这
+        <span class="tooltiptext bottom">提示文本</span>
+    </div>
+    <h2>提示工具定位练习-添加箭头</h2>
+    <div>见前面的练习，::after的伪类实现</div>
+    <h2>提示工具淡入效果</h2>
+    <div class="tooltip">鼠标移到我这
+        <span class="tooltiptext top animate">提示文本</span>
+    </div>
+</body>
+
+</html>
