@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>弹幕</title>
+    <style>
+    #container {
+        margin:8px;
+        border:1px solid black;
+        overflow:hidden;
+        height:300px;
+        position: relative;
+    }
+    .float-word {
+        position:absolute;
+    }
+    .center {
+        text-align: center;
+    }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+
+    </div>
+    <div class="center">
+        <input type="text" maxlength="32" name="text" id="text" placeholder="请输入字幕">
+        <input type="submit" value="提交" id="submit">
+        <button id="clear">清屏</button>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function () {
+        var container = $('#container');
+        console.log('height', container.height());
+        function danmu() {
+            var text = $('#text').val();
+            
+            console.log('text', text);
+            var el = $('<div class="float-word">' + text  + '</div>');
+            var top = Math.random() * container.height();
+            var elapse = Math.random() * 10000 + 5000;
+            var r = Math.random() * 256;
+            var g = Math.random() * 256;
+            var b = Math.random() * 256;
+            var fontSize = Math.random() * 16 + 10;
+
+            el.css('top', top + 'px');
+            el.css('right', 0);
+            el.css('color', 'rgba(' + r + ',' + g + ',' + b + ')');
+            el.css('font-size', fontSize + 'px');
+            el.animate({right: container.width()}, elapse)
+            container.append(el);            
+        }
+        $('#text').keyup(function (e) {
+            if (e.keyCode == 13) {
+                danmu();
+            }
+        });
+        $('#submit').click(function () {
+            danmu();
+        });
+        $('#clear').click(function () {
+            $('#container').children().remove();
+        });
+    });
+    </script>
+</body>
+</html>
