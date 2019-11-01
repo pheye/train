@@ -158,6 +158,12 @@
             // 初始化
             console.log('ready');
             getProducts(1)
+            axios.get('https://api.tianapi.com/generalnews/?key=223f3cc179e9b4343c917e7ef6f1cb0c&num=10&page=2')
+            .then(function(res) {
+                console.log('res', res.data)
+            }).catch(function(err) {
+                console.log('err', err)
+            })
         });
     </script>
 </body>
