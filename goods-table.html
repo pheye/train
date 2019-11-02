@@ -127,7 +127,7 @@
         $(document).ready(function () {
             function getProducts(page) {
                 $('.loading').addClass('loading-on');
-                axios.get('http://mock-api.com/7gPXkZgl.mock/products?page=' + page)
+                axios.get('https://lingqule.papamk.com/wp-json/w2w/v1/products?page=' + page)
                     .then(function (res) {
                         var line;
                         var item;
@@ -137,7 +137,7 @@
                         console.log('header:', header);
                         for (var index in res.data) {
                             item = res.data[index];
-                            line = '<tr><td>' + item.name + '</td><td>' + item.price + '</td><td>' + item.created_at + '</td></tr>';
+                            line = '<tr><td>' + item.name + '</td><td>￥' + item.price + '</td><td>' + item.date_created + '</td></tr>';
                             $('#goods').append(line);
                         }
                         $('.loading').removeClass('loading-on');
@@ -158,7 +158,7 @@
             // 初始化
             console.log('ready');
             getProducts(1)
-            axios.get('https://5dbbdb533ec5fb001431a144.mockapi.io/news')
+            axios.get('https://lingqule.papamk.com/wp-json/w2w/v1/products')
             .then(function(res) {
                 console.log('res', res.data)
             }).catch(function(err) {
